@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  # Flask Web Presentation & Analytics Layer
+  web:
+    build: .
+    container_name: ev_market_web
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production
+      - FLASK_DEBUG=False
+      - USE_MYSQL=False
+      - PORT=5000
+      - TABLEAU_DASHBOARD_URL=${TABLEAU_DASHBOARD_URL:-}
+      - TABLEAU_STORY_URL=${TABLEAU_STORY_URL:-}
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - ev_network
+
+  # Optional MySQL 8.0 Enterprise Database Service
+  mysql:
+    image: mysql:8.0
+    container_name: ev_market_db_server
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_ev_password_2026
+      MYSQL_DATABASE: ev_market_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/1_schema.sql
+      - ./sql/views.sql:/docker-entrypoint-initdb.d/2_views.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot_ev_password_2026"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ev_network
+
+volumes:
+  mysql_data:
+
+networks:
+  ev_network:
+    driver: bridge

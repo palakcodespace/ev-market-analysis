@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+
+{% block title %}About - Electric Vehicle Market Intelligence System{% endblock %}
+
+{% block content %}
+<div class="container-fluid px-4 py-4">
+
+    <!-- Header -->
+    <div class="mb-4">
+        <h2 class="fw-bold text-navy mb-1"><i class="bi bi-info-circle-fill text-teal me-2"></i>About the Platform & Technology Stack</h2>
+        <p class="text-muted small mb-0">
+            Final Capstone Project for Skill Wallet Data Analytics & Full-Stack Development Course.
+        </p>
+    </div>
+
+    <!-- Tech Stack Grid -->
+    <div class="row g-4 mb-4">
+        <div class="col-md-3 col-sm-6">
+            <div class="ev-card p-4 h-100 text-center">
+                <i class="bi bi-filetype-py display-4 text-primary mb-3 d-block"></i>
+                <h5 class="fw-bold text-navy">Python 3</h5>
+                <p class="small text-muted mb-2">Data Processing & Analytics Engine</p>
+                <div class="d-flex flex-wrap justify-content-center gap-1">
+                    <span class="badge bg-light text-dark border">Pandas 3.1</span>
+                    <span class="badge bg-light text-dark border">NumPy 2.5</span>
+                    <span class="badge bg-light text-dark border">Pytest 9.1</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+            <div class="ev-card p-4 h-100 text-center">
+                <i class="bi bi-database display-4 text-success mb-3 d-block"></i>
+                <h5 class="fw-bold text-navy">Relational SQL</h5>
+                <p class="small text-muted mb-2">3NF Database with Dual-Engine Fallback</p>
+                <div class="d-flex flex-wrap justify-content-center gap-1">
+                    <span class="badge bg-light text-dark border">MySQL 8.0</span>
+                    <span class="badge bg-light text-dark border">SQLite 3</span>
+                    <span class="badge bg-light text-dark border">SQLAlchemy 2.1</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+            <div class="ev-card p-4 h-100 text-center">
+                <i class="bi bi-bar-chart-steps display-4 text-amber mb-3 d-block"></i>
+                <h5 class="fw-bold text-navy">Tableau Analytics</h5>
+                <p class="small text-muted mb-2">Visual Storytelling & Calculated Fields</p>
+                <div class="d-flex flex-wrap justify-content-center gap-1">
+                    <span class="badge bg-light text-dark border">Tableau Public</span>
+                    <span class="badge bg-light text-dark border">Tableau Desktop</span>
+                    <span class="badge bg-light text-dark border">XML .twb Spec</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+            <div class="ev-card p-4 h-100 text-center">
+                <i class="bi bi-window-sidebar display-4 text-teal mb-3 d-block"></i>
+                <h5 class="fw-bold text-navy">Flask & Bootstrap 5</h5>
+                <p class="small text-muted mb-2">Responsive Presentation Layer</p>
+                <div class="d-flex flex-wrap justify-content-center gap-1">
+                    <span class="badge bg-light text-dark border">Flask 3.1</span>
+                    <span class="badge bg-light text-dark border">Plotly.js</span>
+                    <span class="badge bg-light text-dark border">Bootstrap 5.3</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Specifications & Evaluation Standards -->
+    <div class="row g-4 mb-4">
+        <div class="col-lg-8">
+            <div class="ev-card p-4">
+                <h5 class="fw-bold text-navy mb-3"><i class="bi bi-check2-all text-success me-2"></i>Skill Wallet Project Requirements Checklist</h5>
+                <div class="table-responsive small">
+                    <table class="table table-bordered table-sm">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Category</th>
+                                <th>Specification</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dataset Collection</td>
+                                <td>Authentic IEA and EV-Database datasets with full lineage & metadata</td>
+                                <td><span class="badge bg-success">Complete & Verified</span></td>
+                            </tr>
+                            <tr>
+                                <td>Database Design</td>
+                                <td>Normalized 3NF schema (6 tables, PK/FK constraints, indexes, 6 views)</td>
+                                <td><span class="badge bg-success">Complete & Verified</span></td>
+                            </tr>
+                            <tr>
+                                <td>SQL Analytics</td>
+                                <td>15 distinct operations (CTEs, Window Functions, CASE statements, Denominators)</td>
+                                <td><span class="badge bg-success">Complete & Verified</span></td>
+                            </tr>
+                            <tr>
+                                <td>Data Cleaning</td>
+                                <td>Imputation, IQR outlier boundaries, deduplication, audit logs</td>
+                                <td><span class="badge bg-success">Complete & Verified</span></td>
+                            </tr>
+                            <tr>
+                                <td>Tableau Visuals</td>
+                                <td>10+ documented visualization specs, calculated fields, 5-scene story, .twb file</td>
+                                <td><span class="badge bg-success">Complete & Verified</span></td>
+                            </tr>
+                            <tr>
+                                <td>Web Application</td>
+                                <td>8 responsive Flask routes, Plotly.js charts, Tableau embed support</td>
+                                <td><span class="badge bg-success">Complete & Verified</span></td>
+                            </tr>
+                            <tr>
+                                <td>Performance & QA</td>
+                                <td>Automated Pytest test suite, benchmarks, error handling</td>
+                                <td><span class="badge bg-success">Complete & Verified</span></td>
+                            </tr>
+                            <tr>
+                                <td>Documentation</td>
+                                <td>College project report, data dictionary, DB design, testing report, demo script</td>
+                                <td><span class="badge bg-success">Complete & Verified</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="ev-card p-4 h-100">
+                <h5 class="fw-bold text-navy mb-3"><i class="bi bi-mortarboard-fill text-primary me-2"></i>Course Information</h5>
+                <p class="small text-muted mb-2"><strong>Course:</strong> Skill Wallet Data Analytics & Full-Stack Engineering</p>
+                <p class="small text-muted mb-2"><strong>Project:</strong> Electric Vehicle Market Analysis and Intelligence System</p>
+                <p class="small text-muted mb-2"><strong>Academic Term:</strong> 2026 Academic Evaluation</p>
+                <hr>
+                <h6 class="fw-bold text-navy small">System Execution Mode:</h6>
+                <p class="small text-muted mb-3">
+                    Configured with dual-engine connectivity. Automatically serves live queries from SQLite file storage when local MySQL server credentials are unconfigured, while providing full MySQL 8.0 DDL scripts for enterprise server deployment.
+                </p>
+                <a href="{{ url_for('dashboard') }}" class="btn btn-ev-teal btn-sm w-100">
+                    <i class="bi bi-arrow-right-circle me-1"></i> Go to Dashboard
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

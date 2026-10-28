@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block title %}Battery Technology & Driving Range Analysis{% endblock %}
+
+{% block content %}
+<div class="container-fluid px-4 py-4">
+
+    <!-- Header -->
+    <div class="mb-4">
+        <h2 class="fw-bold text-navy mb-1"><i class="bi bi-battery-charging text-teal me-2"></i>Battery Technology & Driving Range Analysis</h2>
+        <p class="text-muted small mb-0">
+            Evaluating energy density, thermal safety, chemistry adoption trade-offs, and charging infrastructure performance.
+        </p>
+    </div>
+
+    <!-- Battery Chemistry Cards -->
+    <div class="row g-4 mb-4">
+        {% for bt in battery_tech %}
+        <div class="col-md-4">
+            <div class="ev-card p-4 h-100">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="badge {% if bt.chemistry_code == 'LFP' %}badge-lfp{% elif bt.chemistry_code == 'NMC' %}badge-nmc{% else %}badge-nca{% endif %} px-3 py-2 fs-6">
+                        {{ bt.chemistry_code }}
+                    </span>
+                    <span class="text-muted small fw-semibold">{{ bt.model_count }} Production Models</span>
+                </div>
+                <h5 class="fw-bold text-navy mb-2">{{ bt.full_name }}</h5>
+                <ul class="list-unstyled small mb-3">
+                    <li class="mb-1"><strong class="text-dark">Energy Density:</strong> {{ bt.energy_density_wh_kg }} Wh/kg</li>
+                    <li class="mb-1"><strong class="text-dark">Thermal Stability:</strong> {{ bt.thermal_stability }}</li>
+                    <li class="mb-1"><strong class="text-dark">Cost Tier:</strong> {{ bt.cost_tier }}</li>
+                    <li class="mb-1"><strong class="text-dark">Avg Battery Pack:</strong> {{ bt.avg_battery_kwh }} kWh</li>
+                    <li class="mb-1"><strong class="text-dark">Avg Range:</strong> {{ bt.avg_range_km }} km</li>
+                    <li><strong class="text-dark">Avg Fast Charge:</strong> {{ bt.avg_charging_power_kw }} kW</li>
+                </ul>
+                <div class="p-2 bg-light rounded small border">
+                    {% if bt.chemistry_code == 'LFP' %}
+                    Cobalt-free chemistry offering high cycle life and thermal runaway resistance; dominant in high-volume entry and mid-tier EVs.
+                    {% elif bt.chemistry_code == 'NMC' %}
+                    Balanced high energy density and low temperature performance; widely deployed in mid-to-luxury long-range platforms.
+                    {% else %}
+                    Premium high-discharge chemistry utilized in high-performance sports and luxury flagships.
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Interactive Scatter Matrix -->
+    <div class="row g-4 mb-4">
+        <div class="col-lg-8">
+            <div class="ev-card p-4 h-100">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="fw-bold text-navy mb-0"><i class="bi bi-scatter-chart text-primary me-2"></i>Battery Capacity vs Driving Range Scatter</h5>
+                    <span class="badge bg-light text-muted border">Interactive Plotly Engine</span>
+                </div>
+                <div id="chart-scatter-battery-range" style="height: 420px;"></div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="ev-card p-4 h-100">
+                <h5 class="fw-bold text-navy mb-3"><i class="bi bi-speedometer text-teal me-2"></i>Range Classifications</h5>
+                <div class="p-3 bg-light rounded-3 mb-3 border-start border-4 border-info">
+                    <h6 class="fw-bold text-navy mb-1">Ultra Long-Range (600+ km)</h6>
+                    <small class="text-muted d-block mb-1">Flagship sedans and extended SUVs (e.g., Lucid Air, Mercedes EQS, BMW iX).</small>
+                    <span class="badge bg-primary">Avg Battery: 98 kWh</span>
+                </div>
+                <div class="p-3 bg-light rounded-3 mb-3 border-start border-4 border-teal">
+                    <h6 class="fw-bold text-navy mb-1">Long-Range (500–599 km)</h6>
+                    <small class="text-muted d-block mb-1">Sweet spot for highway travel (e.g., Tesla Model 3/Y LR, Hyundai Ioniq 6, VW ID.4).</small>
+                    <span class="badge bg-teal text-dark">Avg Battery: 78 kWh</span>
+                </div>
+                <div class="p-3 bg-light rounded-3 mb-3 border-start border-4 border-secondary">
+                    <h6 class="fw-bold text-navy mb-1">Mid-Range (350–499 km)</h6>
+                    <small class="text-muted d-block mb-1">High-volume daily commuters (e.g., BYD Atto 3, MG4 EV, Kia Niro EV).</small>
+                    <span class="badge bg-secondary">Avg Battery: 60 kWh</span>
+                </div>
+                <div class="p-3 bg-light rounded-3 border-start border-4 border-warning">
+                    <h6 class="fw-bold text-navy mb-1">Standard City (&lt;350 km)</h6>
+                    <small class="text-muted d-block mb-1">Urban micro-mobility and compact hatchbacks (e.g., BYD Seagull, Nissan Leaf 40kWh).</small>
+                    <span class="badge bg-warning text-dark">Avg Battery: 38 kWh</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock %}

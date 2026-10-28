@@ -1,0 +1,81 @@
+{
+    "timestamp": "2026-10-28T00:31:35.703762",
+    "specifications_audit": {
+        "raw_rows": 65,
+        "duplicates_removed": 0,
+        "null_values_imputed": {},
+        "standardizations_applied": [
+            "Manufacturer names normalized (e.g. VW -> Volkswagen)",
+            "Battery chemistry terms mapped to LFP, NMC, NCA standards"
+        ],
+        "outlier_flags": {
+            "model_year": {
+                "q1": 2023.0,
+                "q3": 2024.0,
+                "iqr": 1.0,
+                "outliers_detected": 0,
+                "action": "Retained legitimate production vehicle records (e.g. high-capacity pickups, luxury sports sedans)"
+            },
+            "usable_battery_capacity_kwh": {
+                "q1": 68.3,
+                "q3": 95.0,
+                "iqr": 26.7,
+                "outliers_detected": 0,
+                "action": "Retained legitimate production vehicle records (e.g. high-capacity pickups, luxury sports sedans)"
+            },
+            "electric_range_km": {
+                "q1": 460.0,
+                "q3": 582.0,
+                "iqr": 122.0,
+                "outliers_detected": 1,
+                "action": "Retained legitimate production vehicle records (e.g. high-capacity pickups, luxury sports sedans)"
+            },
+            "fast_charge_power_kw": {
+                "q1": 130.0,
+                "q3": 220.0,
+                "iqr": 90.0,
+                "outliers_detected": 0,
+                "action": "Retained legitimate production vehicle records (e.g. high-capacity pickups, luxury sports sedans)"
+            },
+            "charging_time_hours": {
+                "q1": 0.47,
+                "q3": 0.65,
+                "iqr": 0.18,
+                "outliers_detected": 1,
+                "action": "Retained legitimate production vehicle records (e.g. high-capacity pickups, luxury sports sedans)"
+            },
+            "base_msrp_usd": {
+                "q1": 42995.0,
+                "q3": 69995.0,
+                "iqr": 27000.0,
+                "outliers_detected": 2,
+                "action": "Retained legitimate production vehicle records (e.g. high-capacity pickups, luxury sports sedans)"
+            },
+            "customer_rating": {
+                "q1": 4.3,
+                "q3": 4.5,
+                "iqr": 0.2,
+                "outliers_detected": 0,
+                "action": "Retained legitimate production vehicle records (e.g. high-capacity pickups, luxury sports sedans)"
+            }
+        },
+        "cleaned_rows": 65
+    },
+    "sales_audit": {
+        "raw_rows": 294,
+        "duplicates_removed": 0,
+        "null_values_imputed": {},
+        "validations_passed": true,
+        "cleaned_rows": 294,
+        "total_sales_units": 23992200,
+        "years_covered": [
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024
+        ]
+    }
+}

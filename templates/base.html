@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Electric Vehicle Market Intelligence Platform{% endblock %}</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- System Ribbon -->
+    <div class="system-ribbon">
+        <div class="container-fluid px-4 d-flex justify-content-between align-items-center">
+            <div>
+                <i class="bi bi-cpu-fill text-warning me-1"></i>
+                Database Engine: <span class="system-badge-live ms-1">{{ db_mode }}</span>
+                <span class="mx-2 text-secondary">|</span>
+                <i class="bi bi-clock-history me-1"></i> Data Refresh: <strong class="text-light">{{ last_refresh_date }}</strong>
+            </div>
+            <div>
+                <span class="badge bg-secondary me-2">Skill Wallet Analytics Project</span>
+                <span class="text-light">v{{ app_version }}</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-ev sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center" href="{{ url_for('index') }}">
+                <i class="bi bi-ev-front-fill me-2 fs-4 text-teal"></i>
+                <span>EV</span>Market<span class="text-white fw-light ms-1">Intelligence</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#evNavbar" aria-controls="evNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="evNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{{ url_for('index') }}">
+                            <i class="bi bi-house-door me-1"></i> Overview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/dashboard' %}active{% endif %}" href="{{ url_for('dashboard') }}">
+                            <i class="bi bi-speedometer2 me-1"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/manufacturers' %}active{% endif %}" href="{{ url_for('manufacturers') }}">
+                            <i class="bi bi-buildings me-1"></i> Manufacturers
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/battery-analysis' %}active{% endif %}" href="{{ url_for('battery_analysis') }}">
+                            <i class="bi bi-battery-charging me-1"></i> Battery & Range
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/geography' %}active{% endif %}" href="{{ url_for('geography') }}">
+                            <i class="bi bi-globe-americas me-1"></i> Geography
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/story' %}active{% endif %}" href="{{ url_for('story') }}">
+                            <i class="bi bi-journal-bookmark me-1"></i> Market Story
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/methodology' %}active{% endif %}" href="{{ url_for('methodology') }}">
+                            <i class="bi bi-diagram-3 me-1"></i> Methodology
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/about' %}active{% endif %}" href="{{ url_for('about') }}">
+                            <i class="bi bi-info-circle me-1"></i> About
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow-1">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-fluid px-4">
+            <div class="row gy-3">
+                <div class="col-md-5">
+                    <h6 class="text-white fw-bold"><i class="bi bi-ev-front me-2 text-info"></i>Electric Vehicle Market Analysis and Intelligence System</h6>
+                    <p class="text-muted small mb-1">
+                        An end-to-end college data analytics project integrating a normalized SQL database,
+                        Python data processing, Tableau analytics, and an interactive Flask interface.
+                    </p>
+                    <span class="badge bg-dark border border-secondary text-light">Skill Wallet Final Project</span>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="text-white fw-bold">Platform Sections</h6>
+                    <ul class="list-unstyled small mb-0">
+                        <li><a href="{{ url_for('dashboard') }}">Executive BI Dashboard</a></li>
+                        <li><a href="{{ url_for('manufacturers') }}">Manufacturer Benchmark</a></li>
+                        <li><a href="{{ url_for('battery_analysis') }}">Battery Chemistry Deep-Dive</a></li>
+                        <li><a href="{{ url_for('story') }}">5-Scene Narrative</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="text-white fw-bold">Data & Validation Lineage</h6>
+                    <p class="text-muted small mb-1">
+                        Sources: <em>IEA Global EV Outlook (CC BY 4.0)</em>, <em>EV-Database OEM Specifications</em>,
+                        and <em>Consumer Survey Benchmarks</em>.
+                    </p>
+                    <div class="text-muted small">
+                        All metrics verified against relational database constraints.
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary my-3">
+            <div class="d-flex justify-content-between align-items-center small text-muted">
+                <div>&copy; 2026 Electric Vehicle Market Intelligence Platform. All rights reserved.</div>
+                <div>Status: <span class="text-success"><i class="bi bi-check-circle-fill"></i> Operational</span></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

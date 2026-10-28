@@ -1,0 +1,295 @@
+sales_id,manufacturer,vehicle_category,market_region,sales_year,annual_sales_units,data_source
+SALES-0001,Tesla,Sedan,North America,2018,145000,IEA EV Outlook Benchmark Compilation
+SALES-0002,Tesla,Sedan,North America,2019,161000,IEA EV Outlook Benchmark Compilation
+SALES-0003,Tesla,Sedan,North America,2020,206000,IEA EV Outlook Benchmark Compilation
+SALES-0004,Tesla,Sedan,North America,2021,298000,IEA EV Outlook Benchmark Compilation
+SALES-0005,Tesla,Sedan,North America,2022,345000,IEA EV Outlook Benchmark Compilation
+SALES-0006,Tesla,Sedan,North America,2023,395000,IEA EV Outlook Benchmark Compilation
+SALES-0007,Tesla,Sedan,North America,2024,410000,IEA EV Outlook Benchmark Compilation
+SALES-0008,Tesla,SUV,North America,2018,25000,IEA EV Outlook Benchmark Compilation
+SALES-0009,Tesla,SUV,North America,2019,30000,IEA EV Outlook Benchmark Compilation
+SALES-0010,Tesla,SUV,North America,2020,95000,IEA EV Outlook Benchmark Compilation
+SALES-0011,Tesla,SUV,North America,2021,215000,IEA EV Outlook Benchmark Compilation
+SALES-0012,Tesla,SUV,North America,2022,295000,IEA EV Outlook Benchmark Compilation
+SALES-0013,Tesla,SUV,North America,2023,385000,IEA EV Outlook Benchmark Compilation
+SALES-0014,Tesla,SUV,North America,2024,420000,IEA EV Outlook Benchmark Compilation
+SALES-0015,Tesla,Sedan,Europe,2018,30000,IEA EV Outlook Benchmark Compilation
+SALES-0016,Tesla,Sedan,Europe,2019,95000,IEA EV Outlook Benchmark Compilation
+SALES-0017,Tesla,Sedan,Europe,2020,86000,IEA EV Outlook Benchmark Compilation
+SALES-0018,Tesla,Sedan,Europe,2021,141000,IEA EV Outlook Benchmark Compilation
+SALES-0019,Tesla,Sedan,Europe,2022,91000,IEA EV Outlook Benchmark Compilation
+SALES-0020,Tesla,Sedan,Europe,2023,101000,IEA EV Outlook Benchmark Compilation
+SALES-0021,Tesla,Sedan,Europe,2024,105000,IEA EV Outlook Benchmark Compilation
+SALES-0022,Tesla,SUV,Europe,2018,8000,IEA EV Outlook Benchmark Compilation
+SALES-0023,Tesla,SUV,Europe,2019,10000,IEA EV Outlook Benchmark Compilation
+SALES-0024,Tesla,SUV,Europe,2020,12000,IEA EV Outlook Benchmark Compilation
+SALES-0025,Tesla,SUV,Europe,2021,27000,IEA EV Outlook Benchmark Compilation
+SALES-0026,Tesla,SUV,Europe,2022,137000,IEA EV Outlook Benchmark Compilation
+SALES-0027,Tesla,SUV,Europe,2023,255000,IEA EV Outlook Benchmark Compilation
+SALES-0028,Tesla,SUV,Europe,2024,260000,IEA EV Outlook Benchmark Compilation
+SALES-0029,Tesla,Sedan,Asia-Pacific,2018,16000,IEA EV Outlook Benchmark Compilation
+SALES-0030,Tesla,Sedan,Asia-Pacific,2019,45000,IEA EV Outlook Benchmark Compilation
+SALES-0031,Tesla,Sedan,Asia-Pacific,2020,138000,IEA EV Outlook Benchmark Compilation
+SALES-0032,Tesla,Sedan,Asia-Pacific,2021,169000,IEA EV Outlook Benchmark Compilation
+SALES-0033,Tesla,Sedan,Asia-Pacific,2022,158000,IEA EV Outlook Benchmark Compilation
+SALES-0034,Tesla,Sedan,Asia-Pacific,2023,172000,IEA EV Outlook Benchmark Compilation
+SALES-0035,Tesla,Sedan,Asia-Pacific,2024,180000,IEA EV Outlook Benchmark Compilation
+SALES-0036,Tesla,SUV,Asia-Pacific,2018,5000,IEA EV Outlook Benchmark Compilation
+SALES-0037,Tesla,SUV,Asia-Pacific,2019,8000,IEA EV Outlook Benchmark Compilation
+SALES-0038,Tesla,SUV,Asia-Pacific,2020,15000,IEA EV Outlook Benchmark Compilation
+SALES-0039,Tesla,SUV,Asia-Pacific,2021,170000,IEA EV Outlook Benchmark Compilation
+SALES-0040,Tesla,SUV,Asia-Pacific,2022,315000,IEA EV Outlook Benchmark Compilation
+SALES-0041,Tesla,SUV,Asia-Pacific,2023,456000,IEA EV Outlook Benchmark Compilation
+SALES-0042,Tesla,SUV,Asia-Pacific,2024,490000,IEA EV Outlook Benchmark Compilation
+SALES-0043,Tesla,Pickup,North America,2018,0,IEA EV Outlook Benchmark Compilation
+SALES-0044,Tesla,Pickup,North America,2019,0,IEA EV Outlook Benchmark Compilation
+SALES-0045,Tesla,Pickup,North America,2020,0,IEA EV Outlook Benchmark Compilation
+SALES-0046,Tesla,Pickup,North America,2021,0,IEA EV Outlook Benchmark Compilation
+SALES-0047,Tesla,Pickup,North America,2022,0,IEA EV Outlook Benchmark Compilation
+SALES-0048,Tesla,Pickup,North America,2023,2500,IEA EV Outlook Benchmark Compilation
+SALES-0049,Tesla,Pickup,North America,2024,28000,IEA EV Outlook Benchmark Compilation
+SALES-0050,BYD,Sedan,Asia-Pacific,2018,95000,IEA EV Outlook Benchmark Compilation
+SALES-0051,BYD,Sedan,Asia-Pacific,2019,110000,IEA EV Outlook Benchmark Compilation
+SALES-0052,BYD,Sedan,Asia-Pacific,2020,130000,IEA EV Outlook Benchmark Compilation
+SALES-0053,BYD,Sedan,Asia-Pacific,2021,275000,IEA EV Outlook Benchmark Compilation
+SALES-0054,BYD,Sedan,Asia-Pacific,2022,480000,IEA EV Outlook Benchmark Compilation
+SALES-0055,BYD,Sedan,Asia-Pacific,2023,650000,IEA EV Outlook Benchmark Compilation
+SALES-0056,BYD,Sedan,Asia-Pacific,2024,780000,IEA EV Outlook Benchmark Compilation
+SALES-0057,BYD,SUV,Asia-Pacific,2018,85000,IEA EV Outlook Benchmark Compilation
+SALES-0058,BYD,SUV,Asia-Pacific,2019,98000,IEA EV Outlook Benchmark Compilation
+SALES-0059,BYD,SUV,Asia-Pacific,2020,115000,IEA EV Outlook Benchmark Compilation
+SALES-0060,BYD,SUV,Asia-Pacific,2021,310000,IEA EV Outlook Benchmark Compilation
+SALES-0061,BYD,SUV,Asia-Pacific,2022,590000,IEA EV Outlook Benchmark Compilation
+SALES-0062,BYD,SUV,Asia-Pacific,2023,880000,IEA EV Outlook Benchmark Compilation
+SALES-0063,BYD,SUV,Asia-Pacific,2024,1120000,IEA EV Outlook Benchmark Compilation
+SALES-0064,BYD,Hatchback,Asia-Pacific,2018,40000,IEA EV Outlook Benchmark Compilation
+SALES-0065,BYD,Hatchback,Asia-Pacific,2019,45000,IEA EV Outlook Benchmark Compilation
+SALES-0066,BYD,Hatchback,Asia-Pacific,2020,52000,IEA EV Outlook Benchmark Compilation
+SALES-0067,BYD,Hatchback,Asia-Pacific,2021,120000,IEA EV Outlook Benchmark Compilation
+SALES-0068,BYD,Hatchback,Asia-Pacific,2022,340000,IEA EV Outlook Benchmark Compilation
+SALES-0069,BYD,Hatchback,Asia-Pacific,2023,560000,IEA EV Outlook Benchmark Compilation
+SALES-0070,BYD,Hatchback,Asia-Pacific,2024,710000,IEA EV Outlook Benchmark Compilation
+SALES-0071,BYD,SUV,Europe,2018,0,IEA EV Outlook Benchmark Compilation
+SALES-0072,BYD,SUV,Europe,2019,500,IEA EV Outlook Benchmark Compilation
+SALES-0073,BYD,SUV,Europe,2020,1200,IEA EV Outlook Benchmark Compilation
+SALES-0074,BYD,SUV,Europe,2021,4500,IEA EV Outlook Benchmark Compilation
+SALES-0075,BYD,SUV,Europe,2022,15000,IEA EV Outlook Benchmark Compilation
+SALES-0076,BYD,SUV,Europe,2023,45000,IEA EV Outlook Benchmark Compilation
+SALES-0077,BYD,SUV,Europe,2024,85000,IEA EV Outlook Benchmark Compilation
+SALES-0078,BYD,Sedan,Europe,2018,0,IEA EV Outlook Benchmark Compilation
+SALES-0079,BYD,Sedan,Europe,2019,0,IEA EV Outlook Benchmark Compilation
+SALES-0080,BYD,Sedan,Europe,2020,500,IEA EV Outlook Benchmark Compilation
+SALES-0081,BYD,Sedan,Europe,2021,2000,IEA EV Outlook Benchmark Compilation
+SALES-0082,BYD,Sedan,Europe,2022,8000,IEA EV Outlook Benchmark Compilation
+SALES-0083,BYD,Sedan,Europe,2023,32000,IEA EV Outlook Benchmark Compilation
+SALES-0084,BYD,Sedan,Europe,2024,62000,IEA EV Outlook Benchmark Compilation
+SALES-0085,BYD,Crossover,Latin America,2018,1000,IEA EV Outlook Benchmark Compilation
+SALES-0086,BYD,Crossover,Latin America,2019,2500,IEA EV Outlook Benchmark Compilation
+SALES-0087,BYD,Crossover,Latin America,2020,4500,IEA EV Outlook Benchmark Compilation
+SALES-0088,BYD,Crossover,Latin America,2021,11000,IEA EV Outlook Benchmark Compilation
+SALES-0089,BYD,Crossover,Latin America,2022,24000,IEA EV Outlook Benchmark Compilation
+SALES-0090,BYD,Crossover,Latin America,2023,52000,IEA EV Outlook Benchmark Compilation
+SALES-0091,BYD,Crossover,Latin America,2024,88000,IEA EV Outlook Benchmark Compilation
+SALES-0092,Volkswagen,Hatchback,Europe,2018,38000,IEA EV Outlook Benchmark Compilation
+SALES-0093,Volkswagen,Hatchback,Europe,2019,48000,IEA EV Outlook Benchmark Compilation
+SALES-0094,Volkswagen,Hatchback,Europe,2020,72000,IEA EV Outlook Benchmark Compilation
+SALES-0095,Volkswagen,Hatchback,Europe,2021,89000,IEA EV Outlook Benchmark Compilation
+SALES-0096,Volkswagen,Hatchback,Europe,2022,83000,IEA EV Outlook Benchmark Compilation
+SALES-0097,Volkswagen,Hatchback,Europe,2023,89000,IEA EV Outlook Benchmark Compilation
+SALES-0098,Volkswagen,Hatchback,Europe,2024,92000,IEA EV Outlook Benchmark Compilation
+SALES-0099,Volkswagen,SUV,Europe,2018,12000,IEA EV Outlook Benchmark Compilation
+SALES-0100,Volkswagen,SUV,Europe,2019,18000,IEA EV Outlook Benchmark Compilation
+SALES-0101,Volkswagen,SUV,Europe,2020,45000,IEA EV Outlook Benchmark Compilation
+SALES-0102,Volkswagen,SUV,Europe,2021,119000,IEA EV Outlook Benchmark Compilation
+SALES-0103,Volkswagen,SUV,Europe,2022,145000,IEA EV Outlook Benchmark Compilation
+SALES-0104,Volkswagen,SUV,Europe,2023,165000,IEA EV Outlook Benchmark Compilation
+SALES-0105,Volkswagen,SUV,Europe,2024,172000,IEA EV Outlook Benchmark Compilation
+SALES-0106,Volkswagen,SUV,North America,2018,2000,IEA EV Outlook Benchmark Compilation
+SALES-0107,Volkswagen,SUV,North America,2019,4000,IEA EV Outlook Benchmark Compilation
+SALES-0108,Volkswagen,SUV,North America,2020,8000,IEA EV Outlook Benchmark Compilation
+SALES-0109,Volkswagen,SUV,North America,2021,17000,IEA EV Outlook Benchmark Compilation
+SALES-0110,Volkswagen,SUV,North America,2022,22000,IEA EV Outlook Benchmark Compilation
+SALES-0111,Volkswagen,SUV,North America,2023,38000,IEA EV Outlook Benchmark Compilation
+SALES-0112,Volkswagen,SUV,North America,2024,45000,IEA EV Outlook Benchmark Compilation
+SALES-0113,Volkswagen,SUV,Asia-Pacific,2018,5000,IEA EV Outlook Benchmark Compilation
+SALES-0114,Volkswagen,SUV,Asia-Pacific,2019,12000,IEA EV Outlook Benchmark Compilation
+SALES-0115,Volkswagen,SUV,Asia-Pacific,2020,25000,IEA EV Outlook Benchmark Compilation
+SALES-0116,Volkswagen,SUV,Asia-Pacific,2021,71000,IEA EV Outlook Benchmark Compilation
+SALES-0117,Volkswagen,SUV,Asia-Pacific,2022,120000,IEA EV Outlook Benchmark Compilation
+SALES-0118,Volkswagen,SUV,Asia-Pacific,2023,135000,IEA EV Outlook Benchmark Compilation
+SALES-0119,Volkswagen,SUV,Asia-Pacific,2024,140000,IEA EV Outlook Benchmark Compilation
+SALES-0120,Volkswagen,Sedan,Europe,2018,0,IEA EV Outlook Benchmark Compilation
+SALES-0121,Volkswagen,Sedan,Europe,2019,0,IEA EV Outlook Benchmark Compilation
+SALES-0122,Volkswagen,Sedan,Europe,2020,0,IEA EV Outlook Benchmark Compilation
+SALES-0123,Volkswagen,Sedan,Europe,2021,0,IEA EV Outlook Benchmark Compilation
+SALES-0124,Volkswagen,Sedan,Europe,2022,0,IEA EV Outlook Benchmark Compilation
+SALES-0125,Volkswagen,Sedan,Europe,2023,8000,IEA EV Outlook Benchmark Compilation
+SALES-0126,Volkswagen,Sedan,Europe,2024,28000,IEA EV Outlook Benchmark Compilation
+SALES-0127,BMW,Sedan,Europe,2018,22000,IEA EV Outlook Benchmark Compilation
+SALES-0128,BMW,Sedan,Europe,2019,28000,IEA EV Outlook Benchmark Compilation
+SALES-0129,BMW,Sedan,Europe,2020,34000,IEA EV Outlook Benchmark Compilation
+SALES-0130,BMW,Sedan,Europe,2021,48000,IEA EV Outlook Benchmark Compilation
+SALES-0131,BMW,Sedan,Europe,2022,67000,IEA EV Outlook Benchmark Compilation
+SALES-0132,BMW,Sedan,Europe,2023,98000,IEA EV Outlook Benchmark Compilation
+SALES-0133,BMW,Sedan,Europe,2024,115000,IEA EV Outlook Benchmark Compilation
+SALES-0134,BMW,SUV,Europe,2018,15000,IEA EV Outlook Benchmark Compilation
+SALES-0135,BMW,SUV,Europe,2019,21000,IEA EV Outlook Benchmark Compilation
+SALES-0136,BMW,SUV,Europe,2020,30000,IEA EV Outlook Benchmark Compilation
+SALES-0137,BMW,SUV,Europe,2021,52000,IEA EV Outlook Benchmark Compilation
+SALES-0138,BMW,SUV,Europe,2022,89000,IEA EV Outlook Benchmark Compilation
+SALES-0139,BMW,SUV,Europe,2023,124000,IEA EV Outlook Benchmark Compilation
+SALES-0140,BMW,SUV,Europe,2024,138000,IEA EV Outlook Benchmark Compilation
+SALES-0141,BMW,Sedan,North America,2018,8000,IEA EV Outlook Benchmark Compilation
+SALES-0142,BMW,Sedan,North America,2019,11000,IEA EV Outlook Benchmark Compilation
+SALES-0143,BMW,Sedan,North America,2020,14000,IEA EV Outlook Benchmark Compilation
+SALES-0144,BMW,Sedan,North America,2021,22000,IEA EV Outlook Benchmark Compilation
+SALES-0145,BMW,Sedan,North America,2022,35000,IEA EV Outlook Benchmark Compilation
+SALES-0146,BMW,Sedan,North America,2023,51000,IEA EV Outlook Benchmark Compilation
+SALES-0147,BMW,Sedan,North America,2024,59000,IEA EV Outlook Benchmark Compilation
+SALES-0148,BMW,SUV,North America,2018,6000,IEA EV Outlook Benchmark Compilation
+SALES-0149,BMW,SUV,North America,2019,9000,IEA EV Outlook Benchmark Compilation
+SALES-0150,BMW,SUV,North America,2020,12000,IEA EV Outlook Benchmark Compilation
+SALES-0151,BMW,SUV,North America,2021,21000,IEA EV Outlook Benchmark Compilation
+SALES-0152,BMW,SUV,North America,2022,38000,IEA EV Outlook Benchmark Compilation
+SALES-0153,BMW,SUV,North America,2023,56000,IEA EV Outlook Benchmark Compilation
+SALES-0154,BMW,SUV,North America,2024,64000,IEA EV Outlook Benchmark Compilation
+SALES-0155,Hyundai,Crossover,Europe,2018,18000,IEA EV Outlook Benchmark Compilation
+SALES-0156,Hyundai,Crossover,Europe,2019,26000,IEA EV Outlook Benchmark Compilation
+SALES-0157,Hyundai,Crossover,Europe,2020,42000,IEA EV Outlook Benchmark Compilation
+SALES-0158,Hyundai,Crossover,Europe,2021,65000,IEA EV Outlook Benchmark Compilation
+SALES-0159,Hyundai,Crossover,Europe,2022,82000,IEA EV Outlook Benchmark Compilation
+SALES-0160,Hyundai,Crossover,Europe,2023,94000,IEA EV Outlook Benchmark Compilation
+SALES-0161,Hyundai,Crossover,Europe,2024,98000,IEA EV Outlook Benchmark Compilation
+SALES-0162,Hyundai,Crossover,North America,2018,7000,IEA EV Outlook Benchmark Compilation
+SALES-0163,Hyundai,Crossover,North America,2019,12000,IEA EV Outlook Benchmark Compilation
+SALES-0164,Hyundai,Crossover,North America,2020,18000,IEA EV Outlook Benchmark Compilation
+SALES-0165,Hyundai,Crossover,North America,2021,34000,IEA EV Outlook Benchmark Compilation
+SALES-0166,Hyundai,Crossover,North America,2022,48000,IEA EV Outlook Benchmark Compilation
+SALES-0167,Hyundai,Crossover,North America,2023,62000,IEA EV Outlook Benchmark Compilation
+SALES-0168,Hyundai,Crossover,North America,2024,71000,IEA EV Outlook Benchmark Compilation
+SALES-0169,Hyundai,Sedan,Global,2018,0,IEA EV Outlook Benchmark Compilation
+SALES-0170,Hyundai,Sedan,Global,2019,0,IEA EV Outlook Benchmark Compilation
+SALES-0171,Hyundai,Sedan,Global,2020,0,IEA EV Outlook Benchmark Compilation
+SALES-0172,Hyundai,Sedan,Global,2021,5000,IEA EV Outlook Benchmark Compilation
+SALES-0173,Hyundai,Sedan,Global,2022,24000,IEA EV Outlook Benchmark Compilation
+SALES-0174,Hyundai,Sedan,Global,2023,58000,IEA EV Outlook Benchmark Compilation
+SALES-0175,Hyundai,Sedan,Global,2024,65000,IEA EV Outlook Benchmark Compilation
+SALES-0176,Kia,Crossover,Global,2018,16000,IEA EV Outlook Benchmark Compilation
+SALES-0177,Kia,Crossover,Global,2019,24000,IEA EV Outlook Benchmark Compilation
+SALES-0178,Kia,Crossover,Global,2020,38000,IEA EV Outlook Benchmark Compilation
+SALES-0179,Kia,Crossover,Global,2021,61000,IEA EV Outlook Benchmark Compilation
+SALES-0180,Kia,Crossover,Global,2022,95000,IEA EV Outlook Benchmark Compilation
+SALES-0181,Kia,Crossover,Global,2023,118000,IEA EV Outlook Benchmark Compilation
+SALES-0182,Kia,Crossover,Global,2024,128000,IEA EV Outlook Benchmark Compilation
+SALES-0183,Kia,SUV,North America,2018,0,IEA EV Outlook Benchmark Compilation
+SALES-0184,Kia,SUV,North America,2019,0,IEA EV Outlook Benchmark Compilation
+SALES-0185,Kia,SUV,North America,2020,0,IEA EV Outlook Benchmark Compilation
+SALES-0186,Kia,SUV,North America,2021,0,IEA EV Outlook Benchmark Compilation
+SALES-0187,Kia,SUV,North America,2022,0,IEA EV Outlook Benchmark Compilation
+SALES-0188,Kia,SUV,North America,2023,12000,IEA EV Outlook Benchmark Compilation
+SALES-0189,Kia,SUV,North America,2024,38000,IEA EV Outlook Benchmark Compilation
+SALES-0190,Mercedes-Benz,Sedan,Europe,2018,14000,IEA EV Outlook Benchmark Compilation
+SALES-0191,Mercedes-Benz,Sedan,Europe,2019,19000,IEA EV Outlook Benchmark Compilation
+SALES-0192,Mercedes-Benz,Sedan,Europe,2020,25000,IEA EV Outlook Benchmark Compilation
+SALES-0193,Mercedes-Benz,Sedan,Europe,2021,42000,IEA EV Outlook Benchmark Compilation
+SALES-0194,Mercedes-Benz,Sedan,Europe,2022,61000,IEA EV Outlook Benchmark Compilation
+SALES-0195,Mercedes-Benz,Sedan,Europe,2023,82000,IEA EV Outlook Benchmark Compilation
+SALES-0196,Mercedes-Benz,Sedan,Europe,2024,94000,IEA EV Outlook Benchmark Compilation
+SALES-0197,Mercedes-Benz,SUV,Global,2018,10000,IEA EV Outlook Benchmark Compilation
+SALES-0198,Mercedes-Benz,SUV,Global,2019,16000,IEA EV Outlook Benchmark Compilation
+SALES-0199,Mercedes-Benz,SUV,Global,2020,27000,IEA EV Outlook Benchmark Compilation
+SALES-0200,Mercedes-Benz,SUV,Global,2021,49000,IEA EV Outlook Benchmark Compilation
+SALES-0201,Mercedes-Benz,SUV,Global,2022,78000,IEA EV Outlook Benchmark Compilation
+SALES-0202,Mercedes-Benz,SUV,Global,2023,109000,IEA EV Outlook Benchmark Compilation
+SALES-0203,Mercedes-Benz,SUV,Global,2024,122000,IEA EV Outlook Benchmark Compilation
+SALES-0204,Ford,SUV,North America,2018,0,IEA EV Outlook Benchmark Compilation
+SALES-0205,Ford,SUV,North America,2019,0,IEA EV Outlook Benchmark Compilation
+SALES-0206,Ford,SUV,North America,2020,5000,IEA EV Outlook Benchmark Compilation
+SALES-0207,Ford,SUV,North America,2021,27000,IEA EV Outlook Benchmark Compilation
+SALES-0208,Ford,SUV,North America,2022,39000,IEA EV Outlook Benchmark Compilation
+SALES-0209,Ford,SUV,North America,2023,41000,IEA EV Outlook Benchmark Compilation
+SALES-0210,Ford,SUV,North America,2024,48000,IEA EV Outlook Benchmark Compilation
+SALES-0211,Ford,Pickup,North America,2018,0,IEA EV Outlook Benchmark Compilation
+SALES-0212,Ford,Pickup,North America,2019,0,IEA EV Outlook Benchmark Compilation
+SALES-0213,Ford,Pickup,North America,2020,0,IEA EV Outlook Benchmark Compilation
+SALES-0214,Ford,Pickup,North America,2021,0,IEA EV Outlook Benchmark Compilation
+SALES-0215,Ford,Pickup,North America,2022,15000,IEA EV Outlook Benchmark Compilation
+SALES-0216,Ford,Pickup,North America,2023,24000,IEA EV Outlook Benchmark Compilation
+SALES-0217,Ford,Pickup,North America,2024,32000,IEA EV Outlook Benchmark Compilation
+SALES-0218,Ford,SUV,Europe,2018,0,IEA EV Outlook Benchmark Compilation
+SALES-0219,Ford,SUV,Europe,2019,0,IEA EV Outlook Benchmark Compilation
+SALES-0220,Ford,SUV,Europe,2020,2000,IEA EV Outlook Benchmark Compilation
+SALES-0221,Ford,SUV,Europe,2021,23000,IEA EV Outlook Benchmark Compilation
+SALES-0222,Ford,SUV,Europe,2022,25000,IEA EV Outlook Benchmark Compilation
+SALES-0223,Ford,SUV,Europe,2023,21000,IEA EV Outlook Benchmark Compilation
+SALES-0224,Ford,SUV,Europe,2024,24000,IEA EV Outlook Benchmark Compilation
+SALES-0225,Volvo,SUV,Europe,2018,8000,IEA EV Outlook Benchmark Compilation
+SALES-0226,Volvo,SUV,Europe,2019,15000,IEA EV Outlook Benchmark Compilation
+SALES-0227,Volvo,SUV,Europe,2020,28000,IEA EV Outlook Benchmark Compilation
+SALES-0228,Volvo,SUV,Europe,2021,45000,IEA EV Outlook Benchmark Compilation
+SALES-0229,Volvo,SUV,Europe,2022,66000,IEA EV Outlook Benchmark Compilation
+SALES-0230,Volvo,SUV,Europe,2023,88000,IEA EV Outlook Benchmark Compilation
+SALES-0231,Volvo,SUV,Europe,2024,112000,IEA EV Outlook Benchmark Compilation
+SALES-0232,Polestar,Sedan,Europe,2018,0,IEA EV Outlook Benchmark Compilation
+SALES-0233,Polestar,Sedan,Europe,2019,1000,IEA EV Outlook Benchmark Compilation
+SALES-0234,Polestar,Sedan,Europe,2020,10000,IEA EV Outlook Benchmark Compilation
+SALES-0235,Polestar,Sedan,Europe,2021,29000,IEA EV Outlook Benchmark Compilation
+SALES-0236,Polestar,Sedan,Europe,2022,51000,IEA EV Outlook Benchmark Compilation
+SALES-0237,Polestar,Sedan,Europe,2023,54000,IEA EV Outlook Benchmark Compilation
+SALES-0238,Polestar,Sedan,Europe,2024,58000,IEA EV Outlook Benchmark Compilation
+SALES-0239,MG,Hatchback,Europe,2018,2000,IEA EV Outlook Benchmark Compilation
+SALES-0240,MG,Hatchback,Europe,2019,5000,IEA EV Outlook Benchmark Compilation
+SALES-0241,MG,Hatchback,Europe,2020,12000,IEA EV Outlook Benchmark Compilation
+SALES-0242,MG,Hatchback,Europe,2021,25000,IEA EV Outlook Benchmark Compilation
+SALES-0243,MG,Hatchback,Europe,2022,52000,IEA EV Outlook Benchmark Compilation
+SALES-0244,MG,Hatchback,Europe,2023,98000,IEA EV Outlook Benchmark Compilation
+SALES-0245,MG,Hatchback,Europe,2024,125000,IEA EV Outlook Benchmark Compilation
+SALES-0246,MG,SUV,Europe,2018,4000,IEA EV Outlook Benchmark Compilation
+SALES-0247,MG,SUV,Europe,2019,9000,IEA EV Outlook Benchmark Compilation
+SALES-0248,MG,SUV,Europe,2020,18000,IEA EV Outlook Benchmark Compilation
+SALES-0249,MG,SUV,Europe,2021,32000,IEA EV Outlook Benchmark Compilation
+SALES-0250,MG,SUV,Europe,2022,48000,IEA EV Outlook Benchmark Compilation
+SALES-0251,MG,SUV,Europe,2023,65000,IEA EV Outlook Benchmark Compilation
+SALES-0252,MG,SUV,Europe,2024,76000,IEA EV Outlook Benchmark Compilation
+SALES-0253,Renault,Hatchback,Europe,2018,40000,IEA EV Outlook Benchmark Compilation
+SALES-0254,Renault,Hatchback,Europe,2019,48000,IEA EV Outlook Benchmark Compilation
+SALES-0255,Renault,Hatchback,Europe,2020,84000,IEA EV Outlook Benchmark Compilation
+SALES-0256,Renault,Hatchback,Europe,2021,76000,IEA EV Outlook Benchmark Compilation
+SALES-0257,Renault,Hatchback,Europe,2022,74000,IEA EV Outlook Benchmark Compilation
+SALES-0258,Renault,Hatchback,Europe,2023,68000,IEA EV Outlook Benchmark Compilation
+SALES-0259,Renault,Hatchback,Europe,2024,72000,IEA EV Outlook Benchmark Compilation
+SALES-0260,Peugeot,Hatchback,Europe,2018,12000,IEA EV Outlook Benchmark Compilation
+SALES-0261,Peugeot,Hatchback,Europe,2019,18000,IEA EV Outlook Benchmark Compilation
+SALES-0262,Peugeot,Hatchback,Europe,2020,38000,IEA EV Outlook Benchmark Compilation
+SALES-0263,Peugeot,Hatchback,Europe,2021,49000,IEA EV Outlook Benchmark Compilation
+SALES-0264,Peugeot,Hatchback,Europe,2022,56000,IEA EV Outlook Benchmark Compilation
+SALES-0265,Peugeot,Hatchback,Europe,2023,61000,IEA EV Outlook Benchmark Compilation
+SALES-0266,Peugeot,Hatchback,Europe,2024,67000,IEA EV Outlook Benchmark Compilation
+SALES-0267,Rivian,Pickup,North America,2018,0,IEA EV Outlook Benchmark Compilation
+SALES-0268,Rivian,Pickup,North America,2019,0,IEA EV Outlook Benchmark Compilation
+SALES-0269,Rivian,Pickup,North America,2020,0,IEA EV Outlook Benchmark Compilation
+SALES-0270,Rivian,Pickup,North America,2021,900,IEA EV Outlook Benchmark Compilation
+SALES-0271,Rivian,Pickup,North America,2022,12000,IEA EV Outlook Benchmark Compilation
+SALES-0272,Rivian,Pickup,North America,2023,26000,IEA EV Outlook Benchmark Compilation
+SALES-0273,Rivian,Pickup,North America,2024,31000,IEA EV Outlook Benchmark Compilation
+SALES-0274,Rivian,SUV,North America,2018,0,IEA EV Outlook Benchmark Compilation
+SALES-0275,Rivian,SUV,North America,2019,0,IEA EV Outlook Benchmark Compilation
+SALES-0276,Rivian,SUV,North America,2020,0,IEA EV Outlook Benchmark Compilation
+SALES-0277,Rivian,SUV,North America,2021,100,IEA EV Outlook Benchmark Compilation
+SALES-0278,Rivian,SUV,North America,2022,8000,IEA EV Outlook Benchmark Compilation
+SALES-0279,Rivian,SUV,North America,2023,24000,IEA EV Outlook Benchmark Compilation
+SALES-0280,Rivian,SUV,North America,2024,29000,IEA EV Outlook Benchmark Compilation
+SALES-0281,NIO,Sedan,Asia-Pacific,2018,11000,IEA EV Outlook Benchmark Compilation
+SALES-0282,NIO,Sedan,Asia-Pacific,2019,20000,IEA EV Outlook Benchmark Compilation
+SALES-0283,NIO,Sedan,Asia-Pacific,2020,43000,IEA EV Outlook Benchmark Compilation
+SALES-0284,NIO,Sedan,Asia-Pacific,2021,91000,IEA EV Outlook Benchmark Compilation
+SALES-0285,NIO,Sedan,Asia-Pacific,2022,122000,IEA EV Outlook Benchmark Compilation
+SALES-0286,NIO,Sedan,Asia-Pacific,2023,160000,IEA EV Outlook Benchmark Compilation
+SALES-0287,NIO,Sedan,Asia-Pacific,2024,185000,IEA EV Outlook Benchmark Compilation
+SALES-0288,XPeng,SUV,Asia-Pacific,2018,5000,IEA EV Outlook Benchmark Compilation
+SALES-0289,XPeng,SUV,Asia-Pacific,2019,16000,IEA EV Outlook Benchmark Compilation
+SALES-0290,XPeng,SUV,Asia-Pacific,2020,27000,IEA EV Outlook Benchmark Compilation
+SALES-0291,XPeng,SUV,Asia-Pacific,2021,98000,IEA EV Outlook Benchmark Compilation
+SALES-0292,XPeng,SUV,Asia-Pacific,2022,120000,IEA EV Outlook Benchmark Compilation
+SALES-0293,XPeng,SUV,Asia-Pacific,2023,141000,IEA EV Outlook Benchmark Compilation
+SALES-0294,XPeng,SUV,Asia-Pacific,2024,162000,IEA EV Outlook Benchmark Compilation

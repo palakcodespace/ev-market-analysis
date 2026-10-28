@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+
+# Database files
+database/*.sqlite
+database/*.db
+
+# Environment and secrets
+.env
+*.local
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Tableau temporary files
+*.twb~
+*.twbx~
+*.tfl
+*.hyper
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+venv/
+.venv/

@@ -1,0 +1,66 @@
+vehicle_id,manufacturer,model_name,model_year,vehicle_category,battery_technology,usable_battery_capacity_kwh,electric_range_km,fast_charge_power_kw,charging_time_hours,base_msrp_usd,manufacturing_country,market_region,customer_rating,co2_emissions_g_km,powertrain_type
+EV-001,Tesla,Model 3 Standard,2023,Sedan,LFP,57.5,491,170,0.42,38990,China,North America,4.4,0,BEV
+EV-002,Tesla,Model 3 Long Range,2024,Sedan,NMC,78.1,629,250,0.45,47740,USA,North America,4.6,0,BEV
+EV-003,Tesla,Model Y Long Range,2023,SUV,NMC,78.1,533,250,0.45,48990,USA,Global,4.7,0,BEV
+EV-004,Tesla,Model Y RWD,2024,SUV,LFP,60.0,455,170,0.42,43990,China,Europe,4.5,0,BEV
+EV-005,Tesla,Model S Plaid,2023,Sedan,NCA,99.3,600,250,0.5,89990,USA,North America,4.8,0,BEV
+EV-006,Tesla,Model X Long Range,2023,SUV,NCA,99.3,560,250,0.5,79990,USA,North America,4.3,0,BEV
+EV-007,Tesla,Cybertruck Dual Motor,2024,Pickup,NMC,123.0,547,250,0.65,79990,USA,North America,4.1,0,BEV
+EV-008,BYD,Atto 3 Extended Range,2023,SUV,LFP,60.5,420,88,0.73,37990,China,Asia-Pacific,4.3,0,BEV
+EV-009,BYD,Seal Excellence AWD,2024,Sedan,LFP,82.5,520,150,0.62,46990,China,Global,4.5,0,BEV
+EV-010,BYD,Dolphin Comfort,2023,Hatchback,LFP,60.4,427,88,0.73,29990,China,Global,4.2,0,BEV
+EV-011,BYD,Han EV Executive,2023,Sedan,LFP,85.4,521,120,0.68,51990,China,China,4.4,0,BEV
+EV-012,BYD,Tang EV Flagship,2023,SUV,LFP,108.8,530,170,0.7,69990,China,Europe,4.2,0,BEV
+EV-013,BYD,Song Plus EV,2024,Crossover,LFP,71.8,520,140,0.65,33500,China,China,4.3,0,BEV
+EV-014,BYD,Seagull Standard,2024,Hatchback,LFP,38.8,305,40,0.85,11500,China,China,4.1,0,BEV
+EV-015,Volkswagen,ID.3 Pro Performance,2023,Hatchback,NMC,58.0,426,120,0.58,39990,Germany,Europe,4.1,0,BEV
+EV-016,Volkswagen,ID.4 Pro,2024,SUV,NMC,77.0,550,175,0.47,48990,Germany,Global,4.3,0,BEV
+EV-017,Volkswagen,ID.5 GTX,2023,Coupe,NMC,77.0,512,175,0.47,56500,Germany,Europe,4.2,0,BEV
+EV-018,Volkswagen,ID.7 Pro,2024,Sedan,NMC,77.0,621,175,0.47,56990,Germany,Europe,4.5,0,BEV
+EV-019,Volkswagen,ID.Buzz Pro,2023,Van,NMC,77.0,423,170,0.5,64990,Germany,Europe,4.6,0,BEV
+EV-020,Audi,Q4 e-tron 45,2024,SUV,NMC,77.0,534,175,0.47,55200,Germany,Europe,4.4,0,BEV
+EV-021,Audi,e-tron GT quattro,2023,Sedan,NMC,84.0,488,270,0.38,106500,Germany,North America,4.7,0,BEV
+EV-022,Audi,Q8 e-tron 55,2024,SUV,NMC,106.0,582,170,0.52,74400,Belgium,North America,4.4,0,BEV
+EV-023,Porsche,Taycan 4S,2024,Sedan,NMC,93.4,512,270,0.37,118500,Germany,Global,4.8,0,BEV
+EV-024,Porsche,Macan Electric Turbo,2024,SUV,NMC,95.0,591,270,0.35,105300,Germany,Global,4.7,0,BEV
+EV-025,BMW,i4 eDrive40,2023,Sedan,NMC,80.7,590,205,0.52,57300,Germany,Global,4.6,0,BEV
+EV-026,BMW,iX xDrive50,2023,SUV,NMC,105.2,630,195,0.58,87100,Germany,North America,4.5,0,BEV
+EV-027,BMW,iX1 xDrive30,2024,SUV,NMC,64.7,440,130,0.48,55000,Germany,Europe,4.3,0,BEV
+EV-028,BMW,i7 xDrive60,2023,Sedan,NMC,101.7,625,195,0.57,124200,Germany,Global,4.7,0,BEV
+EV-029,BMW,i5 eDrive40,2024,Sedan,NMC,81.2,582,205,0.5,66800,Germany,Global,4.5,0,BEV
+EV-030,Hyundai,Ioniq 5 Long Range AWD,2023,Crossover,NMC,77.4,481,233,0.3,49850,South Korea,Global,4.7,0,BEV
+EV-031,Hyundai,Ioniq 6 Long Range RWD,2024,Sedan,NMC,77.4,614,233,0.3,45500,South Korea,Global,4.6,0,BEV
+EV-032,Hyundai,Kona Electric Long Range,2024,SUV,NMC,65.4,514,102,0.68,34050,South Korea,Europe,4.3,0,BEV
+EV-033,Kia,EV6 Long Range AWD,2023,Crossover,NMC,77.4,506,233,0.3,52600,South Korea,Global,4.6,0,BEV
+EV-034,Kia,EV9 99.8 kWh AWD,2024,SUV,NMC,99.8,505,210,0.4,73900,South Korea,North America,4.5,0,BEV
+EV-035,Kia,Niro EV,2023,SUV,NMC,64.8,460,80,0.75,39600,South Korea,Europe,4.2,0,BEV
+EV-036,Genesis,GV60 Sport Plus,2023,Crossover,NMC,77.4,465,233,0.3,69900,South Korea,North America,4.5,0,BEV
+EV-037,Mercedes-Benz,EQE 350+,2023,Sedan,NMC,90.6,639,170,0.53,74900,Germany,Global,4.4,0,BEV
+EV-038,Mercedes-Benz,EQS 450+,2023,Sedan,NMC,108.4,753,200,0.52,104400,Germany,Global,4.6,0,BEV
+EV-039,Mercedes-Benz,EQB 300 4MATIC,2023,SUV,NMC,66.5,423,100,0.53,54500,Hungary,Europe,4.2,0,BEV
+EV-040,Mercedes-Benz,EQE SUV 350 4MATIC,2024,SUV,NMC,90.6,508,170,0.53,77900,USA,North America,4.3,0,BEV
+EV-041,Ford,Mustang Mach-E Ext Range,2023,SUV,NMC,91.0,540,150,0.75,52995,Mexico,North America,4.3,0,BEV
+EV-042,Ford,Mustang Mach-E Standard,2024,SUV,LFP,72.6,470,150,0.55,42995,Mexico,North America,4.2,0,BEV
+EV-043,Ford,F-150 Lightning Extended,2023,Pickup,NMC,131.0,515,150,0.7,69995,USA,North America,4.4,0,BEV
+EV-044,Ford,E-Transit Custom,2024,Van,NMC,74.0,380,125,0.68,45000,Turkey,Europe,4.1,0,BEV
+EV-045,Volvo,EX30 Single Motor Ext Range,2024,SUV,NMC,64.0,476,153,0.43,34950,China,Global,4.5,0,BEV
+EV-046,Volvo,XC40 Recharge Twin AWD,2023,SUV,NMC,78.0,500,200,0.47,53550,Belgium,Europe,4.4,0,BEV
+EV-047,Polestar,Polestar 2 Long Range Dual Motor,2024,Sedan,NMC,78.0,592,205,0.47,55300,China,Global,4.4,0,BEV
+EV-048,Polestar,Polestar 3 Long Range Dual Motor,2024,SUV,NMC,111.0,610,250,0.5,83900,USA,North America,4.3,0,BEV
+EV-049,Geely,Zeekr 001 Performance,2024,Sedan,NMC,100.0,620,200,0.5,48500,China,China,4.4,0,BEV
+EV-050,Nissan,Leaf 40 kWh,2023,Hatchback,NMC,39.0,270,50,0.98,28140,Japan,Global,4.1,0,BEV
+EV-051,Nissan,Ariya Evolve+ 87 kWh,2023,SUV,NMC,87.0,533,130,0.58,47190,Japan,North America,4.3,0,BEV
+EV-052,Renault,Megane E-Tech EV60,2023,Hatchback,NMC,60.0,450,130,0.5,39500,France,Europe,4.3,0,BEV
+EV-053,Renault,Scenic E-Tech 87 kWh,2024,SUV,NMC,87.0,625,150,0.55,46900,France,Europe,4.5,0,BEV
+EV-054,MG,MG4 EV Standard Range,2023,Hatchback,LFP,51.0,350,88,0.67,26995,China,Europe,4.4,0,BEV
+EV-055,MG,MG4 EV Trophy Extended Range,2024,Hatchback,NMC,77.0,520,144,0.63,36495,China,Europe,4.5,0,BEV
+EV-056,MG,ZS EV Long Range,2023,SUV,NMC,68.3,440,93,0.68,32995,China,Europe,4.1,0,BEV
+EV-057,Peugeot,e-208 51 kWh,2023,Hatchback,NMC,48.1,400,100,0.5,33200,Slovakia,Europe,4.2,0,BEV
+EV-058,Peugeot,e-3008 73 kWh,2024,SUV,NMC,73.0,525,160,0.5,44990,France,Europe,4.3,0,BEV
+EV-059,Jeep,Avenger Electric,2023,SUV,NMC,50.8,400,100,0.57,37000,Poland,Europe,4.2,0,BEV
+EV-060,Rivian,R1T Adventure Dual-Motor,2023,Pickup,NMC,135.0,566,220,0.68,73000,USA,North America,4.6,0,BEV
+EV-061,Rivian,R1S Adventure Dual-Motor,2024,SUV,NMC,135.0,566,220,0.68,78000,USA,North America,4.6,0,BEV
+EV-062,Lucid,Air Pure RWD,2024,Sedan,NMC,88.0,660,250,0.33,69900,USA,North America,4.7,0,BEV
+EV-063,NIO,ET5 75 kWh,2023,Sedan,LFP,75.0,456,125,0.5,47500,China,Europe,4.4,0,BEV
+EV-064,NIO,ES6 100 kWh,2024,SUV,NMC,100.0,550,180,0.55,59800,China,China,4.3,0,BEV
+EV-065,XPeng,G9 Long Range,2023,SUV,NMC,98.0,570,300,0.33,57600,China,Europe,4.5,0,BEV

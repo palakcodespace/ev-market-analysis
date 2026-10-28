@@ -1,0 +1,251 @@
+{% extends "base.html" %}
+
+{% block title %}EV Market Intelligence Dashboard{% endblock %}
+
+{% block content %}
+<div class="container-fluid px-4 py-4">
+
+    <!-- Top Dashboard Header -->
+    <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+        <div>
+            <h2 class="fw-bold text-navy mb-0">
+                <i class="bi bi-speedometer2 text-teal me-2"></i>EV Market Intelligence Dashboard
+            </h2>
+            <p class="text-muted small mb-0">
+                Reporting Coverage: <strong>2018–2024 Global EV Market</strong> &bull; Currency: <strong>USD</strong> &bull; Range: <strong>WLTP/EPA Standard</strong>
+            </p>
+        </div>
+        <div class="d-flex gap-2 mt-2 mt-md-0">
+            <span class="badge bg-light text-dark border p-2 d-flex align-items-center">
+                <i class="bi bi-circle-fill text-success me-1 fs-6"></i> Live SQL Engine Connected
+            </span>
+        </div>
+    </div>
+
+    <!-- Interactive Filter Controls Bar -->
+    <div class="filter-bar mb-4">
+        <div class="row g-3 align-items-center">
+            <div class="col-md-3 col-sm-6">
+                <label for="filter-year" class="form-label small fw-bold text-navy mb-1">
+                    <i class="bi bi-calendar3 me-1"></i> Sales Year
+                </label>
+                <select id="filter-year" class="form-select form-select-sm">
+                    {% for yr in filter_opts.years %}
+                    <option value="{{ yr }}" {% if yr == 2024 %}selected{% endif %}>{{ yr }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <label for="filter-mfg" class="form-label small fw-bold text-navy mb-1">
+                    <i class="bi bi-buildings me-1"></i> Manufacturer
+                </label>
+                <select id="filter-mfg" class="form-select form-select-sm">
+                    <option value="All" selected>All Manufacturers</option>
+                    {% for mfg in filter_opts.manufacturers %}
+                    <option value="{{ mfg }}">{{ mfg }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <label for="filter-cat" class="form-label small fw-bold text-navy mb-1">
+                    <i class="bi bi-car-front me-1"></i> Vehicle Category
+                </label>
+                <select id="filter-cat" class="form-select form-select-sm">
+                    <option value="All" selected>All Categories</option>
+                    {% for cat in filter_opts.categories %}
+                    <option value="{{ cat }}">{{ cat }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-3 col-sm-6 d-flex align-items-end">
+                <button id="btn-reset-filters" class="btn btn-ev-outline btn-sm w-100">
+                    <i class="bi bi-arrow-counterclockwise me-1"></i> Reset Filters
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 1: KPI Cards -->
+    <div class="row g-3 mb-4">
+        <div class="col-xl-2 col-md-4 col-sm-6">
+            <div class="kpi-card kpi-teal">
+                <div class="kpi-label">Annual EV Sales</div>
+                <div class="kpi-value text-teal" id="kpi-sales">{{ "{:,}".format(kpis.total_sales_units) }}</div>
+                <div class="kpi-subtext">Units Sold in Period</div>
+            </div>
+        </div>
+        <div class="col-xl-2 col-md-4 col-sm-6">
+            <div class="kpi-card kpi-blue">
+                <div class="kpi-label">Active OEMs</div>
+                <div class="kpi-value" id="kpi-mfgs">{{ kpis.active_manufacturers }}</div>
+                <div class="kpi-subtext">Reporting Brands</div>
+            </div>
+        </div>
+        <div class="col-xl-2 col-md-4 col-sm-6">
+            <div class="kpi-card kpi-green">
+                <div class="kpi-label">Average Range</div>
+                <div class="kpi-value" id="kpi-range">{{ kpis.avg_electric_range_km }} km</div>
+                <div class="kpi-subtext">WLTP/EPA Rated</div>
+            </div>
+        </div>
+        <div class="col-xl-2 col-md-4 col-sm-6">
+            <div class="kpi-card kpi-amber">
+                <div class="kpi-label">Average Battery</div>
+                <div class="kpi-value" id="kpi-battery">{{ kpis.avg_battery_capacity_kwh }} kWh</div>
+                <div class="kpi-subtext">Usable Pack Capacity</div>
+            </div>
+        </div>
+        <div class="col-xl-2 col-md-4 col-sm-6">
+            <div class="kpi-card kpi-purple">
+                <div class="kpi-label">Customer Rating</div>
+                <div class="kpi-value" id="kpi-rating">{{ kpis.avg_customer_rating }} / 5.0</div>
+                <div class="kpi-subtext">Satisfaction Benchmark</div>
+            </div>
+        </div>
+        <div class="col-xl-2 col-md-4 col-sm-6">
+            <div class="kpi-card">
+                <div class="kpi-label">Average Price</div>
+                <div class="kpi-value" id="kpi-price">${{ "{:,.0f}".format(kpis.avg_base_msrp_usd) }}</div>
+                <div class="kpi-subtext">Base MSRP</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 2: Annual Sales Trend & Manufacturer Rankings -->
+    <div class="row g-4 mb-4">
+        <div class="col-lg-7">
+            <div class="ev-card p-3 h-100">
+                <div class="ev-card-header mb-2">
+                    <h5 class="ev-card-title"><i class="bi bi-graph-up text-primary me-2"></i>Annual EV Sales Trend & YoY Growth</h5>
+                    <span class="badge bg-light text-muted border">2018–2024</span>
+                </div>
+                <div id="chart-sales-trend" style="height: 350px;"></div>
+            </div>
+        </div>
+        <div class="col-lg-5">
+            <div class="ev-card p-3 h-100">
+                <div class="ev-card-header mb-2">
+                    <h5 class="ev-card-title"><i class="bi bi-trophy text-amber me-2"></i>Manufacturer Sales Ranking & Market Share</h5>
+                    <span class="badge bg-light text-muted border">Top 10</span>
+                </div>
+                <div id="chart-manufacturer-ranking" style="height: 350px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 3: Vehicle Category Analysis & Battery Technology Distribution -->
+    <div class="row g-4 mb-4">
+        <div class="col-lg-5">
+            <div class="ev-card p-3 h-100">
+                <div class="ev-card-header mb-2">
+                    <h5 class="ev-card-title"><i class="bi bi-pie-chart text-teal me-2"></i>Vehicle Category Sales Distribution</h5>
+                    <span class="badge bg-light text-muted border">Market Share %</span>
+                </div>
+                <div id="chart-category-breakdown" style="height: 340px;"></div>
+            </div>
+        </div>
+        <div class="col-lg-7">
+            <div class="ev-card p-3 h-100">
+                <div class="ev-card-header mb-2">
+                    <h5 class="ev-card-title"><i class="bi bi-battery-charging text-info me-2"></i>Battery Chemistry Adoption (LFP vs NMC vs NCA)</h5>
+                    <span class="badge bg-light text-muted border">Models & Avg Range</span>
+                </div>
+                <div id="chart-battery-tech" style="height: 340px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 4: Driving Range vs Battery Capacity & Manufacturing Countries -->
+    <div class="row g-4 mb-4">
+        <div class="col-lg-7">
+            <div class="ev-card p-3 h-100">
+                <div class="ev-card-header mb-2">
+                    <h5 class="ev-card-title"><i class="bi bi-scatter-chart text-primary me-2"></i>Battery Capacity vs Driving Range Scatter Matrix</h5>
+                    <span class="badge bg-light text-muted border">65 EV Models</span>
+                </div>
+                <div id="chart-scatter-battery-range" style="height: 360px;"></div>
+            </div>
+        </div>
+        <div class="col-lg-5">
+            <div class="ev-card p-3 h-100">
+                <div class="ev-card-header mb-2">
+                    <h5 class="ev-card-title"><i class="bi bi-globe-americas text-success me-2"></i>Manufacturing Country Production Distribution</h5>
+                    <span class="badge bg-light text-muted border">Vehicle Models Count</span>
+                </div>
+                <div id="chart-geography" style="height: 360px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 5: Price-to-Range Ratio & Customer Satisfaction -->
+    <div class="row g-4 mb-4">
+        <div class="col-lg-6">
+            <div class="ev-card p-3 h-100">
+                <div class="ev-card-header mb-2">
+                    <h5 class="ev-card-title"><i class="bi bi-currency-dollar text-success me-2"></i>Vehicle Base MSRP vs Driving Range ($/km Value)</h5>
+                    <span class="badge bg-light text-muted border">Viridis Scale ($/km)</span>
+                </div>
+                <div id="chart-scatter-price-range" style="height: 340px;"></div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="ev-card p-3 h-100">
+                <div class="ev-card-header mb-2">
+                    <h5 class="ev-card-title"><i class="bi bi-star-fill text-warning me-2"></i>Customer Satisfaction & Reliability Benchmarks</h5>
+                    <span class="badge bg-light text-muted border">Top OEMs</span>
+                </div>
+                <div id="chart-customer-ratings" style="height: 340px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tableau Publishing Integration Panel -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="tableau-embed-container">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="fw-bold text-navy mb-0">
+                        <i class="bi bi-window-sidebar text-primary me-2"></i>Tableau Interactive Executive Dashboard Embed
+                    </h5>
+                    <span class="badge bg-secondary">Official Tableau Embed Framework</span>
+                </div>
+                {% if tableau_dashboard_url %}
+                <iframe src="{{ tableau_dashboard_url }}" width="100%" height="650" frameborder="0"></iframe>
+                {% else %}
+                <div class="tableau-fallback-notice">
+                    <i class="bi bi-info-circle display-4 text-primary mb-3 d-block"></i>
+                    <h5 class="fw-bold text-navy">Tableau Public / Cloud Workbook Integration</h5>
+                    <p class="text-muted col-lg-8 mx-auto mb-3">
+                        To embed a live interactive Tableau Desktop or Tableau Public dashboard directly within this window,
+                        publish your workbook to Tableau Public/Server and set the <code>TABLEAU_DASHBOARD_URL</code> environment variable in your <code>.env</code> file.
+                    </p>
+                    <div class="d-flex justify-content-center gap-2">
+                        <a href="{{ url_for('methodology') }}" class="btn btn-outline-primary btn-sm">
+                            <i class="bi bi-book me-1"></i> View Tableau Development Guide
+                        </a>
+                        <span class="badge bg-success align-self-center p-2">
+                            <i class="bi bi-check-circle me-1"></i> Native Plotly.js charts active above
+                        </span>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Metadata Ribbon -->
+    <div class="p-3 bg-white rounded-3 border text-muted small d-flex flex-wrap justify-content-between align-items-center">
+        <div>
+            <i class="bi bi-database me-1"></i> Data Sources: <strong>IEA Global EV Outlook (CC BY 4.0)</strong>, <strong>EV-Database Specs</strong>, <strong>Consumer Survey Benchmarks</strong>.
+        </div>
+        <div>
+            Last Refresh: <strong>October 2026</strong> &bull; Methodology: <strong>Standardized WLTP/EPA Metrics & Relational SQL Aggregation</strong>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block title %}Geographical Manufacturing Distribution{% endblock %}
+
+{% block content %}
+<div class="container-fluid px-4 py-4">
+
+    <!-- Header -->
+    <div class="mb-4">
+        <h2 class="fw-bold text-navy mb-1"><i class="bi bi-globe-americas text-success me-2"></i>Geographical Manufacturing & Production Footprint</h2>
+        <p class="text-muted small mb-0">
+            Analyzing regional vehicle assembly concentration, supply chain localization, and technical attributes by country of manufacture.
+        </p>
+    </div>
+
+    <!-- Country Summary Table -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="ev-card p-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="fw-bold text-navy mb-0"><i class="bi bi-flag-fill text-primary me-2"></i>Country of Manufacture Benchmark Matrix</h5>
+                    <span class="badge bg-success">Live SQL Query (vw_geographic_manufacturing_distribution)</span>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover table-ev">
+                        <thead>
+                            <tr>
+                                <th>Manufacturing Country</th>
+                                <th>Models Assembled</th>
+                                <th>Active OEMs</th>
+                                <th>Avg Driving Range</th>
+                                <th>Avg Battery Pack</th>
+                                <th>Avg Base MSRP</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for c in country_data %}
+                            <tr>
+                                <td class="fw-bold text-navy">
+                                    <i class="bi bi-geo-alt-fill text-muted me-2"></i>{{ c.manufacturing_country }}
+                                </td>
+                                <td><span class="badge bg-primary px-3 py-1">{{ c.model_count }} models</span></td>
+                                <td class="fw-semibold">{{ c.manufacturer_count }}</td>
+                                <td>{{ c.avg_range_km }} km</td>
+                                <td>{{ c.avg_battery_kwh }} kWh</td>
+                                <td class="fw-bold">${{ "{:,.0f}".format(c.avg_price_usd) }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chart & Strategic Map -->
+    <div class="row g-4 mb-4">
+        <div class="col-lg-7">
+            <div class="ev-card p-4 h-100">
+                <h5 class="fw-bold text-navy mb-3"><i class="bi bi-bar-chart-fill text-success me-2"></i>Assembly Volume by Country</h5>
+                <div id="chart-geography" style="height: 380px;"></div>
+            </div>
+        </div>
+        <div class="col-lg-5">
+            <div class="ev-card p-4 h-100">
+                <h5 class="fw-bold text-navy mb-3"><i class="bi bi-shield-check text-teal me-2"></i>Key Geographic Insights</h5>
+                <div class="mb-3">
+                    <h6 class="fw-bold text-navy mb-1">China as the Global Hub</h6>
+                    <p class="small text-muted mb-0">
+                        China produces the highest number of discrete EV models across diverse price segments, supported by complete
+                        domestic cell manufacturing (CATL, BYD FinDreams).
+                    </p>
+                </div>
+                <div class="mb-3">
+                    <h6 class="fw-bold text-navy mb-1">German & European Specialization</h6>
+                    <p class="small text-muted mb-0">
+                        German manufacturing plants focus on premium executive sedans and SUVs (Audi, BMW, Porsche, Mercedes-Benz)
+                        with high energy density NMC packs and premium MSRPs.
+                    </p>
+                </div>
+                <div>
+                    <h6 class="fw-bold text-navy mb-1">North American Expansion</h6>
+                    <p class="small text-muted mb-0">
+                        Driven by the US Inflation Reduction Act (IRA), battery gigafactory construction and electric pickup truck assembly
+                        (Ford F-150 Lightning, Rivian R1T, Cybertruck) lead localized innovation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock %}

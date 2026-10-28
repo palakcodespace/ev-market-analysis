@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+
+{% block title %}Market Story - 5-Scene Analytical Narrative{% endblock %}
+
+{% block content %}
+<div class="container-fluid px-4 py-4">
+
+    <!-- Header -->
+    <div class="mb-4">
+        <h2 class="fw-bold text-navy mb-1"><i class="bi bi-journal-bookmark-fill text-teal me-2"></i>Tableau Story: The Global EV Transition Narrative</h2>
+        <p class="text-muted small mb-0">
+            A structured, 5-scene evidence-based walkthrough exploring the automotive industry's shift toward electrification (2018–2024).
+        </p>
+    </div>
+
+    <!-- Tableau Story Embed Container -->
+    {% if tableau_story_url %}
+    <div class="tableau-embed-container mb-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="fw-bold text-navy mb-0">
+                <i class="bi bi-window-split text-primary me-2"></i>Live Tableau Story Embed
+            </h5>
+            <span class="badge bg-secondary">Official Tableau Story Player</span>
+        </div>
+        <iframe src="{{ tableau_story_url }}" width="100%" height="700" frameborder="0"></iframe>
+    </div>
+    {% endif %}
+
+    <!-- 5-Scene Narrative Interactive Carousel / Walkthrough -->
+    <div class="row g-4 mb-4">
+
+        <!-- Scene 1 -->
+        <div class="col-12">
+            <div class="ev-card p-4 border-start border-4 border-teal">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="badge bg-teal text-dark px-3 py-2 fw-bold">Scene 1 of 5</span>
+                    <span class="text-muted small">Global Market Sizing</span>
+                </div>
+                <h4 class="fw-bold text-navy mb-2">EV Market Overview: From Niche Curiosity to Mainstream Adoption</h4>
+                <p class="text-muted">
+                    Between 2018 and 2024, global electric vehicle adoption exhibited a compound annual growth rate (CAGR) exceeding 40%.
+                    Global annual sales expanded from approximately 2.1 million units in 2018 to over 17 million vehicles in 2024.
+                    This exponential inflection was catalyzed by continuous battery pack cost declines, aggressive emission regulations in Europe and China,
+                    and the emergence of dedicated, ground-up EV skateboard platforms.
+                </p>
+                <div class="p-3 bg-light rounded-3 d-flex flex-wrap gap-4 small border">
+                    <div><strong>2018 Global Volume:</strong> 2,100,000 units</div>
+                    <div><strong>2024 Global Volume:</strong> 17,100,000+ units</div>
+                    <div><strong>Inflection Point:</strong> 2021 (+94% YoY surge post-pandemic)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scene 2 -->
+        <div class="col-12">
+            <div class="ev-card p-4 border-start border-4 border-primary">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="badge bg-primary px-3 py-2 fw-bold">Scene 2 of 5</span>
+                    <span class="text-muted small">Competitive Landscape</span>
+                </div>
+                <h4 class="fw-bold text-navy mb-2">Manufacturer Competition: The Battle Between Pioneers and Industrial Giants</h4>
+                <p class="text-muted">
+                    The competitive landscape has crystallized into two dominant market frontrunners: <strong>Tesla</strong> and <strong>BYD</strong>.
+                    Tesla pioneered the high-margin, software-defined electric vehicle with the Model 3 and Model Y (the best-selling vehicle globally across all powertrains in 2023).
+                    Concurrently, BYD captured mass-market consumer volume across China and expanding export markets through its proprietary vertical integration—manufacturing
+                    its own cells, motors, and semiconductor chips. European legacy OEMs (Volkswagen, BMW, Mercedes-Benz) and Korean brands (Hyundai-Kia)
+                    retain strong competitive footholds in premium segments and 800V fast-charging architectures.
+                </p>
+                <div class="p-3 bg-light rounded-3 d-flex flex-wrap gap-4 small border">
+                    <div><strong>BYD 2024 Sales:</strong> 2,845,000 units (11.8% global share)</div>
+                    <div><strong>Tesla 2024 Sales:</strong> 1,843,000 units (7.7% global share)</div>
+                    <div><strong>Top 3 Groups:</strong> BYD, Tesla, Volkswagen Group</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scene 3 -->
+        <div class="col-12">
+            <div class="ev-card p-4 border-start border-4 border-warning">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="badge bg-warning text-dark px-3 py-2 fw-bold">Scene 3 of 5</span>
+                    <span class="text-muted small">Segment Dynamics</span>
+                </div>
+                <h4 class="fw-bold text-navy mb-2">Vehicle Categories: Consumer Shift Towards Electric SUVs & Crossovers</h4>
+                <p class="text-muted">
+                    Consumer preference has overwhelmingly shifted toward SUVs and Crossovers, mirroring broader automotive trends.
+                    SUVs account for over 52% of all electric vehicle sales globally. Their elevated ride height provides ample underbody clearance
+                    for large battery packs (75 to 105 kWh) without compromising passenger cabin footwells. Concurrently, aerodynamic sedans continue
+                    to deliver superior range-to-capacity efficiency due to reduced drag coefficients (Cd &lt; 0.23).
+                </p>
+                <div class="p-3 bg-light rounded-3 d-flex flex-wrap gap-4 small border">
+                    <div><strong>SUV Market Share:</strong> 52.4%</div>
+                    <div><strong>Sedan Market Share:</strong> 28.1%</div>
+                    <div><strong>Hatchback / Urban Share:</strong> 14.5%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scene 4 -->
+        <div class="col-12">
+            <div class="ev-card p-4 border-start border-4 border-info">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="badge bg-info text-dark px-3 py-2 fw-bold">Scene 4 of 5</span>
+                    <span class="text-muted small">Powertrain Engineering</span>
+                </div>
+                <h4 class="fw-bold text-navy mb-2">Battery Technology and Driving Range: The LFP Resurgence</h4>
+                <p class="text-muted">
+                    While Nickel Manganese Cobalt (NMC) chemistry maintains leadership in long-range premium vehicles (delivering 550–750 km WLTP range),
+                    Lithium Iron Phosphate (LFP) has experienced a dramatic resurgence. LFP completely eliminates expensive and ethically constrained cobalt and nickel,
+                    offers greater thermal stability (minimizing thermal runaway risks), and tolerates daily 100% charging cycles with minimal degradation.
+                    Standard-range models by Tesla, BYD, MG, and Ford now universally leverage LFP packs to achieve accessible consumer price points.
+                </p>
+                <div class="p-3 bg-light rounded-3 d-flex flex-wrap gap-4 small border">
+                    <div><strong>LFP Models Analyzed:</strong> 18 models (Avg Range: 457 km, 66 kWh)</div>
+                    <div><strong>NMC Models Analyzed:</strong> 43 models (Avg Range: 539 km, 88 kWh)</div>
+                    <div><strong>Avg Fast Charging Speed:</strong> 162 kW peak DC</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scene 5 -->
+        <div class="col-12">
+            <div class="ev-card p-4 border-start border-4 border-success">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="badge bg-success px-3 py-2 fw-bold">Scene 5 of 5</span>
+                    <span class="text-muted small">Strategic Geopolitics</span>
+                </div>
+                <h4 class="fw-bold text-navy mb-2">Geographic Distribution & Strategic Recommendations: Supply Chain Localization</h4>
+                <p class="text-muted">
+                    The global manufacturing footprint reveals significant geographic concentration. Over 40% of analyzed vehicle models and more than
+                    60% of global battery refining capacity reside in China. In response, western governments have enacted industrial policies
+                    (such as the US Inflation Reduction Act and the European Net-Zero Industry Act) offering consumer tax credits conditional on domestic assembly
+                    and localized critical mineral sourcing. For automotive OEMs to maintain profitability, strategic priorities must center on
+                    battery pack localization, fast-charging highway reliability, and software-driven energy management.
+                </p>
+                <div class="p-3 bg-light rounded-3 d-flex flex-wrap gap-4 small border">
+                    <div><strong>Leading Manufacturing Hub:</strong> China (23 models, highest volume)</div>
+                    <div><strong>European Manufacturing Hub:</strong> Germany (16 models, premium focus)</div>
+                    <div><strong>North American Hub:</strong> United States (12 models, trucks/SUVs)</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

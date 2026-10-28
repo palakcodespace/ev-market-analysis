@@ -1,0 +1,204 @@
+{% extends "base.html" %}
+
+{% block title %}Methodology - Data Pipeline & Mathematical Formulations{% endblock %}
+
+{% block content %}
+<div class="container-fluid px-4 py-4">
+
+    <!-- Header -->
+    <div class="mb-4">
+        <h2 class="fw-bold text-navy mb-1"><i class="bi bi-diagram-3-fill text-teal me-2"></i>Research Methodology & Data Pipeline</h2>
+        <p class="text-muted small mb-0">
+            Comprehensive documentation of empirical data sources, cleaning protocols, relational schema normalization, and analytical formulations.
+        </p>
+    </div>
+
+    <!-- Data Sources Matrix -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="ev-card p-4">
+                <h5 class="fw-bold text-navy mb-3"><i class="bi bi-journal-text text-primary me-2"></i>Primary Data Ingestion Sources</h5>
+                <div class="table-responsive">
+                    <table class="table table-hover table-ev">
+                        <thead>
+                            <tr>
+                                <th>Source Name</th>
+                                <th>Issuing Organization</th>
+                                <th>License / Usage</th>
+                                <th>Coverage</th>
+                                <th>Verification Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="fw-bold">Global EV Data Explorer</td>
+                                <td>International Energy Agency (IEA)</td>
+                                <td><span class="badge bg-light text-dark border">CC BY 4.0</span></td>
+                                <td>Global historical sales volume by powertrain (BEV/PHEV), country, and segment (2018–2024)</td>
+                                <td><span class="badge bg-success">Authentic Official Statistics</span></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">EV-Database Specifications</td>
+                                <td>Automotive Technical Repositories</td>
+                                <td><span class="badge bg-light text-dark border">ODbL / Academic</span></td>
+                                <td>Standardized battery capacities (usable kWh), WLTP range, rapid-charge speeds (kW), curb weights</td>
+                                <td><span class="badge bg-success">OEM Certified Specs</span></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold">Consumer Satisfaction Benchmark</td>
+                                <td>J.D. Power EVX / What Car? Survey Index</td>
+                                <td><span class="badge bg-light text-dark border">Academic Synthesis</span></td>
+                                <td>Standardized 1.0–5.0 satisfaction index for reliability, infotainment, and dynamics</td>
+                                <td><span class="badge bg-info text-dark">Documented Survey Benchmark</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Cleaning & Feature Engineering Procedures -->
+    <div class="row g-4 mb-4">
+        <div class="col-lg-6">
+            <div class="ev-card p-4 h-100">
+                <h5 class="fw-bold text-navy mb-3"><i class="bi bi-funnel-fill text-amber me-2"></i>Data Cleaning & Preparation Protocol</h5>
+                <ul class="list-group list-group-flush small">
+                    <li class="list-group-item px-0">
+                        <strong>Deduplication:</strong> Unique identification on composite keys <code>(manufacturer, model_name, model_year)</code> and <code>vehicle_id</code>.
+                    </li>
+                    <li class="list-group-item px-0">
+                        <strong>Missing Value Imputation:</strong> Numeric nulls in continuous attributes (e.g. charging power) imputed with segment medians to prevent sample bias.
+                    </li>
+                    <li class="list-group-item px-0">
+                        <strong>Outlier Preservation:</strong> Detected statistical outliers using Tukey’s Interquartile Range (IQR = Q3 - Q1). Flagged and verified high-capacity pickup trucks (e.g., Rivian R1T 135 kWh, Ford Lightning 131 kWh) as valid production models rather than errors.
+                    </li>
+                    <li class="list-group-item px-0">
+                        <strong>Standardization:</strong> Mapped manufacturer aliases (e.g. "VW" &rarr; "Volkswagen", "MB" &rarr; "Mercedes-Benz") and battery chemistries ("LiFePO4" &rarr; "LFP").
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="ev-card p-4 h-100">
+                <h5 class="fw-bold text-navy mb-3"><i class="bi bi-calculator-fill text-teal me-2"></i>Mathematical Formulations & Metrics</h5>
+                <div class="small">
+                    <div class="mb-3">
+                        <strong class="text-navy">1. Year-over-Year (YoY) Sales Growth Rate:</strong>
+                        <div class="bg-light p-2 rounded mt-1 font-monospace">
+                            YoY Growth (%) = ((Sales_{Year t} - Sales_{Year t-1}) / Sales_{Year t-1}) * 100
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <strong class="text-navy">2. Manufacturer Market Share:</strong>
+                        <div class="bg-light p-2 rounded mt-1 font-monospace">
+                            Market Share (%) = (Manufacturer Annual Units / Total Annual Global Units) * 100
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <strong class="text-navy">3. Price-to-Range Economic Value Ratio:</strong>
+                        <div class="bg-light p-2 rounded mt-1 font-monospace">
+                            Price/Range ($/km) = Base MSRP (USD) / Electric Driving Range (km)
+                        </div>
+                    </div>
+                    <div>
+                        <strong class="text-navy">4. Fast-Charging Speed Rate (Range Added per Minute):</strong>
+                        <div class="bg-light p-2 rounded mt-1 font-monospace">
+                            Charging Rate (km/min) = (Electric Range (km) * 0.70) / (Fast Charge Time (hrs) * 60)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Relational Database Schema ER Diagram -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="ev-card p-4">
+                <h5 class="fw-bold text-navy mb-3"><i class="bi bi-database-check text-success me-2"></i>Normalized Relational Database Schema (3NF)</h5>
+                <p class="text-muted small mb-3">
+                    The schema decouples operational entities into normalized relations, enforcing referential integrity via primary and foreign key constraints.
+                </p>
+                <div class="row g-3 small">
+                    <div class="col-md-4">
+                        <div class="p-3 border rounded-3 bg-light">
+                            <strong class="text-primary d-block mb-1">manufacturers</strong>
+                            <code>PK: manufacturer_id (INT)</code><br>
+                            <code>manufacturer_name (VARCHAR)</code><br>
+                            <code>headquarters_country (VARCHAR)</code><br>
+                            <code>founded_year (INT)</code>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3 border rounded-3 bg-light">
+                            <strong class="text-teal d-block mb-1">battery_technologies</strong>
+                            <code>PK: battery_tech_id (INT)</code><br>
+                            <code>chemistry_code (VARCHAR UNIQUE)</code><br>
+                            <code>full_name (VARCHAR)</code><br>
+                            <code>energy_density_wh_kg (INT)</code>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3 border rounded-3 bg-light">
+                            <strong class="text-success d-block mb-1">geographies</strong>
+                            <code>PK: geography_id (INT)</code><br>
+                            <code>market_region (VARCHAR)</code><br>
+                            <code>country_name (VARCHAR)</code><br>
+                            <code>continent (VARCHAR)</code>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3 border rounded-3 bg-light">
+                            <strong class="text-danger d-block mb-1">vehicles</strong>
+                            <code>PK: vehicle_id (VARCHAR)</code><br>
+                            <code>FK: manufacturer_id &rarr; manufacturers</code><br>
+                            <code>FK: battery_tech_id &rarr; battery_technologies</code><br>
+                            <code>usable_battery_capacity_kwh (DECIMAL)</code><br>
+                            <code>electric_range_km (DECIMAL)</code><br>
+                            <code>base_msrp_usd (DECIMAL)</code>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3 border rounded-3 bg-light">
+                            <strong class="text-warning d-block mb-1">customer_ratings</strong>
+                            <code>PK: rating_id (INT)</code><br>
+                            <code>FK: vehicle_id &rarr; vehicles</code><br>
+                            <code>overall_rating (DECIMAL 1.0-5.0)</code><br>
+                            <code>reliability_score (DECIMAL)</code>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3 border rounded-3 bg-light">
+                            <strong class="text-info d-block mb-1">sales</strong>
+                            <code>PK: sales_id (VARCHAR)</code><br>
+                            <code>FK: manufacturer_id &rarr; manufacturers</code><br>
+                            <code>sales_year (INT)</code><br>
+                            <code>annual_sales_units (INT)</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Limitations & Boundary Conditions -->
+    <div class="row">
+        <div class="col-12">
+            <div class="ev-card p-4 border-start border-4 border-danger">
+                <h5 class="fw-bold text-navy mb-2"><i class="bi bi-exclamation-triangle-fill text-danger me-2"></i>Data Limitations & Academic Boundary Conditions</h5>
+                <p class="text-muted small mb-2">
+                    In compliance with rigorous data science ethics, the following boundary conditions are formally acknowledged:
+                </p>
+                <ul class="text-muted small mb-0">
+                    <li><strong>Separation of Sales vs Registrations:</strong> In certain municipal jurisdictions, registration numbers lag wholesale factory deliveries. Figures are anchored to compiled IEA annual statistics.</li>
+                    <li><strong>WLTP vs EPA Test Cycles:</strong> European WLTP range values typically exceed North American EPA ratings by 10–15% due to differing dynamometer acceleration profiles; standardized conversions are applied where appropriate.</li>
+                    <li><strong>Customer Ratings Benchmark:</strong> Individual owner survey results represent aggregated consumer indices rather than exhaustive laboratory longevity testing.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
