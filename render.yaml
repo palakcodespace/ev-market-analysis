@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: ev-market-intelligence
+    runtime: python
+    buildCommand: pip install -r requirements.txt && python database/seed_or_import.py
+    startCommand: gunicorn wsgi:app --bind 0.0.0.0:$PORT --workers 2 --threads 4 --timeout 120
+    plan: free
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: FLASK_DEBUG
+        value: "False"
+      - key: USE_MYSQL
+        value: "False"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: TABLEAU_DASHBOARD_URL
+        value: ""
+      - key: TABLEAU_STORY_URL
+        value: ""
